@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+  const tabPressed = [];
+const secretCode = 'souhir';
+
+window.addEventListener('keyup', (e) => {
+  console.log(e.key);
+  tabPressed.push(e.key);
+  //console.log(tabPressed);
+  tabPressed.splice(-secretCode.length - 1, tabPressed.length - secretCode.length);
+  console.log(tabPressed);
+  if (tabPressed.join('').includes(secretCode)) {
+    console.log("ffffffff!");
+    cornify_add();
+  }
+  console.log(tabPressed);
+
+
+})
+
+ 
+</script>
+</body>
+
+
+</script>
+</body>
+</html>
